@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanmukha Sai Thiruveedhi - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #1E40AF;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            margin: 2rem 0;
+            width: 50%;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+            padding-right: 2rem;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            width: 16px;
+            height: 16px;
+            background: #3B82F6;
+            border-radius: 50%;
+        }
+        .timeline-item:nth-child(odd)::before {
+            right: -8px;
+        }
+        .timeline-item:nth-child(even)::before {
+            left: -8px;
+        }
+        @media (max-width: 640px) {
+            .timeline::before {
+                left: 2rem;
+            }
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left !important;
+                padding-left: 3rem !important;
+                padding-right: 1rem !important;
+            }
+            .timeline-item::before {
+                left: 1rem !important;
+                right: auto !important;
+            }
+        }
+        .pop-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pop-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation Bar -->
+    <nav class="bg-primary text-white fixed w-full top-0 shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">Shanmukha Sai</div>
+                <div class="space-x-4">
+                    <a href="#home" class="hover:text-secondary">Home</a>
+                    <a href="#about" class="hover:text-secondary">About</a>
+                    <a href="#Education" class="hover:text-secondary">Education</a>
+                    <a href="#skills" class="hover:text-secondary">Skills</a>
+                    <a href="#experience/Internships" class="hover:text-secondary">Experience/Internships</a>
+                    <a href="#projects" class="hover:text-secondary">Projects</a>
+                    <a href="#contact" class="hover:text-secondary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="text-center px-4">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">Shanmukha Sai Thiruveedhi</h1>
+            <p class="text-lg sm:text-xl mb-6">Computer Science Undergraduate with expertise in Python, AI, Machine Learning, Neural Networks</p>
+            <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-secondary hover:text-white transition">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+            <p class="text-lg text-gray-700 text-center">
+                I am a Computer Science undergraduate (2025 batch) with expertise in Python, Artificial Intelligence (AI), Machine Learning (ML), Neural Networks.
+                I'm passionate about developing and enhancing algorithms through research and collaboration.
+                 Completed my Bachelor's degree in Computer Science at KSRM College of Engineering with a CGPA of 8.68, 
+                I have a strong foundation in Information Technology from my diploma at Dayalbagh Educational Institution.
+            </p>
+        </div>
+    </section>
+
+     <!-- Education Section -->
+    <section id="education" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+            <div class="space-y-6">
+                <div class="pop-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Bachelor of Technology in Computer Science</h3>
+                    <p class="text-gray-600">KSRM College of Engineering | 2022 - 2025</p>
+                    <p class="text-gray-700 mt-2">CGPA: 8.68</p>
+                    <p class="text-gray-700 mt-2">Graduated</p>
+                </div>
+                <div class="pop-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Diploma in Information Technology</h3>
+                    <p class="text-gray-600">Dayalbagh Educational Institution | 2019 - 2022</p>
+                    <p class="text-gray-700 mt-2">CGPA: 8.52</p>
+                    <p class="text-gray-700 mt-2">Completed</p>
+                </div>
+                <div class="pop-card bg-white p-6 rounded shadow-md">
+                    <h3 class="text-xl font-semibold">secondary school Education</h3>
+                    <p class="text-gray-600">Vijayanikethan E.M. High school | 2018 - 2019</p>
+                    <p class="text-gray-700 mt-2">CGPA: 9.8</p>
+                    <p class="text-gray-700 mt-2">Completed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="pop-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-4">Technical Skills</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Python Programming</li>
+                        <li>Neural Networks</li>
+                        <li>Supervised Learning</li>
+                        <li>Unsupervised Learning</li>
+                        <li>Large Language Models (LLMs)</li>
+                    </ul>
+                </div>
+                <div class="pop-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-4">Python Libraries</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
+                        <li>sklearn</li>
+                        <li>RAG</li>
+                    </ul>
+                </div>
+                <div class="pop-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-4">Other Skills</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>MySQL</li>
+                        <li>Excel</li>
+                        <li>Git Version Control</li>
+                        <li>Problem Solving</li>
+                        <li>presentation Skills</li>
+                        <li>Communication</li>
+                        <li>Team Collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Experience/Intenships</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="pop-card bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer">
+                        <h3 class="text-xl font-semibold">AI-ML Intern, Reoman Technologies</h3>
+                        <p class="text-gray-600">Feb 2025 - May 2025</p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Collaborated with senior team members to develop and optimize neural network models, improving accuracy by 15%.</li>
+                            <li>Conducted research and preprocessed datasets with 1000+ entries to enhance algorithm performance using Python and Pandas.</li>
+                            <li>Stayed current on AI trends, integrating findings into project workflows.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="pop-card bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer">
+                        <h3 class="text-xl font-semibold">AI Intern, TechSaksham (Transformative Learning)</h3>
+                        <p class="text-gray-600">Jan 2025 - Feb 2025</p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Assisted in data collection and feature engineering for machine learning models, processing 1,060+ data points.</li>
+                            <li>Supported troubleshooting and debugging of neural network architectures, reducing errors by 10%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="pop-card bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer">
+                        <h3 class="text-xl font-semibold">Full Stack Python Intern, Brain O Vision</h3>
+                        <p class="text-gray-600">May 2024 - Sep 2024</p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Developed Python-based ML integrations for web applications, contributing to 2 live projects.</li>
+                            <li>Participated in code reviews, improving code quality and adherence to best practices by 20%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="pop-card bg-gray-100 p-6 rounded-lg shadow-md cursor-pointer">
+                        <h3 class="text-xl font-semibold">Advanced Data Science and AI Intern (Part-Time)</h3>
+                        <p class="text-gray-600">May 2024 - Jun 2024</p>
+                        <ul class="list-disc list-inside text-gray-700 mt-2">
+                            <li>Built and tested deep learning models, achieving a 12% performance boost through hyperparameter tuning.</li>
+                            <li>Conducted analysis on datasets to support predictive AI systems, delivering insights to senior team members.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="pop-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Text-to-Image Generation with Stable Diffusion</h3>
+                    <p class="text-gray-600 mb-2">Built a web application for generating images from text prompts using Stable Diffusion</p>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Technologies:Stable Diffusion,Comfy UI</li>
+                        <li>Integrated user-friendly interface for custom prompts</li>
+                        <li>Optimized model inference speed by 15%</li>
+                    </ul>
+                </div>
+                <div class="pop-card bg-white p-6 rounded-lg shadow-md cursor-pointer">
+                    <h3 class="text-xl font-semibold mb-2">Price prediction of commodities like pulses and vegetables</h3>
+                    <p class="text-gray-600 mb-2">Created a dashboard for price prediction of commodities  using machine learning models, visualized with Matplotlib and Seaborn.</p>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Technologies: Python, Pandas, Matplotlib, Seaborn, Scikit-learn</li>
+                        <li>Analyzed dataset with 10,000+ entries for predictive insights</li>
+                        <li>Achieved 85% prediction accuracy on test data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                    <p class="text-gray-700 mb-2">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <strong>Email:</strong> shanmukhasai432@gmail.com
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        <i class="fas fa-phone mr-2"></i>
+                        <strong>Phone:</strong> 9494103948
+                    </p>
+                   <!-- <p class="text-gray-700 mb-2">
+                        <i class="fas fa-globe mr-2"></i>
+                        <strong>Website:</strong>
+                        <a href="http://www.shanmukhasai.com" class="text-secondary hover:underline">www.shanmukhasai.com</a>
+                    </p>-->
+                    <p class="text-gray-700 mb-2">
+                        <i class="fab fa-linkedin mr-2"></i>
+                        <strong>LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/shanmukhasai-thiruveedhi-95593926b" class="text-secondary hover:underline" target="_blank">shanmukhasai-Linkedin</a>
+                    </p>
+                    <p class="text-gray-700">
+                        <i class="fab fa-github mr-2"></i>
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/shanmukhasai9494/" class="text-secondary hover:underline" target="_blank">shanmukhasai-github</a>
+                    </p>
+                </div>
+                <div>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700">Name</label>
+                            <input type="text" id="name" class="w-full p-2 border rounded" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700">Email</label>
+                            <input type="email" id="email" class="w-full p-2 border rounded" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700">Message</label>
+                            <textarea id="message" class="w-full p-2 border rounded" rows="4" required></textarea>
+                        </div>
+                        <div class="flex space-x-4">
+                            <button type="submit" name="send-email" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Send via Email</button>
+                            <button type="submit" name="send-whatsapp" class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">Send via WhatsApp</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const clickedButton = e.submitter.name;
+
+            if (clickedButton === 'send-email') {
+                // Email redirection
+                const subject = encodeURIComponent(`Contact from ${name} via Portfolio`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+                window.location.href = `mailto:shanmukhasai432@gmail.com?subject=${subject}&body=${body}`;
+            } else if (clickedButton === 'send-whatsapp') {
+                // WhatsApp redirection
+                const text = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+                window.location.href = `https://wa.me/9494103948?text=${text}`;
+            }
+
+            // Reset form after submission
+            this.reset();
+        });
+    </script>
+</body>
+</html>
